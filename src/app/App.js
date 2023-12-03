@@ -49,8 +49,8 @@ const App = () => {
   }, [isVrMode])
 
   return (
-    <a-scene id='scene' ref={scenesRef} cursor='rayOrigin: mouse;' raycaster='objects: .clickable'>
-      <a-light type='ambient' color='#fff' />
+    <a-scene ref={scenesRef} cursor='rayOrigin: mouse;' raycaster='objects: .clickable'>
+      <a-light type='ambient' />
 
       <a-assets timeout='5000'>
         <img id='info' src='assets/img/info.png' />
@@ -75,7 +75,7 @@ const App = () => {
         />
       </a-camera>
 
-      <a-sky position='0 1 -10' rotation={`0 0 0`} src={`assets/img/${event.nameScense}.jpg`} radius='50' />
+      <a-sky position='0 1 -10' rotation='0 0 0' src={`assets/img/${event.nameScense}.jpg`} radius='50' />
     </a-scene>
   )
 }
